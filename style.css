@@ -1,82 +1,122 @@
-body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  margin: 0;
-  background: #f0f2f5;
-  color: #333;
+* {
+  box-sizing: border-box;
 }
 
-/* Header */
-header {
-  background: linear-gradient(135deg, #2c3e50, #1abc9c);
-  color: white;
-  padding: 40px 20px;
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.7)),
+    url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
   text-align: center;
 }
 
-.tagline {
-  font-size: 1.1rem;
-  opacity: 0.9;
+.hero.small {
+  padding: 50px 20px;
 }
 
-/* Nav */
+.hero-content {
+  animation: slideDown 1s ease;
+}
+
+.tagline {
+  opacity: 0.8;
+}
+
+/* NAV */
 nav {
-  background: #34495e;
-  padding: 10px 0;
+  background: #020617;
+  padding: 12px 0;
 }
 
 nav ul {
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
   text-align: center;
 }
 
 nav li {
   display: inline-block;
-  width: 120px;
+  width: 130px;
 }
 
 nav a {
-  color: white;
+  color: #e5e7eb;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 nav a:hover {
-  color: #1abc9c;
+  color: #38bdf8;
 }
 
-/* Main */
+/* MAIN */
 main {
-  padding: 40px 20px;
+  padding: 60px 20px;
   font-size: 18px;
 }
 
 .card {
-  background: white;
+  background: #020617;
   max-width: 700px;
   margin: auto;
   padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
-/* h1 */
+/* TEXT */
 h1 {
   text-align: center;
   font-family: Georgia, serif;
-  color: white;
+  color: #f9fafb;
 }
 
-/* p */
 p {
   line-height: 1.7;
 }
 
-/* Footer */
+/* FOOTER */
 footer {
-  background: #2c3e50;
-  color: white;
+  background: #020617;
   text-align: center;
-  padding: 15px;
+  padding: 16px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* ANIMATION */
+.fade-in {
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
